@@ -1,0 +1,6 @@
+@Peterffy_Dominika_backend_HostAddress = http://localhost:5030
+
+GET {{Peterffy_Dominika_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
