@@ -1,4 +1,3 @@
-
 using Peterffy_Dominika_backend.Models;
 using Peterffy_Dominika_backend.Models.DTOs;
 using Peterffy_Dominika_backend.Services;
@@ -25,6 +24,9 @@ namespace Peterffy_Dominika_backend
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+            // Store the required UID in configuration so controllers can compare against it
+            builder.Configuration["UID"] = "FKB3F4FEA09CE43C";
 
             var app = builder.Build();
 
