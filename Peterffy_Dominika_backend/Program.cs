@@ -18,6 +18,7 @@ namespace Peterffy_Dominika_backend
             builder.Services.AddScoped<ResponseDTO>();
             builder.Services.AddScoped<IBook, booksService>();
             builder.Services.AddScoped<IAuthor, authorService>();
+            builder.Services.AddScoped<ICategory, categoryService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
