@@ -3,5 +3,6 @@
     public interface IAuthor
     {
         Task<object> GetAuthorWithBooks(int authorId);
+        Task<object> GetAuthorsCount();
     }
 }

@@ -32,5 +32,22 @@ namespace Peterffy_Dominika_backend.Controllers
                 });
             }
         }
+
+        [HttpGet("count")]
+        public async Task<ActionResult> GetAuthorsCount()
+        {
+            try
+            {
+                var requestResult = await _author.GetAuthorsCount();
+                return Ok(requestResult);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(400, new
+                {
+                    message = ex.Message
+                });
+            }
+        }
     }
 }

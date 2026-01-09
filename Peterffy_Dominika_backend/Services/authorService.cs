@@ -36,5 +36,23 @@ namespace Peterffy_Dominika_backend.Services
                 return _responseDto;
             }
         }
+
+        //12.Feladat - visszaadja az összes szerző számát
+        public async Task<object> GetAuthorsCount()
+        {
+            try
+            {
+                var count = await _context.Authors.CountAsync();
+                _responseDto.Message = "Sikeres lekérdezés!";
+                _responseDto.Result = count;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                return _responseDto;
+            }
+        }
     }
 }
